@@ -1,0 +1,80 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <title>BMI & BFP Calculator</title>
+    <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@300;400&display=swap" rel="stylesheet">
+    <link href="style.css" rel="stylesheet">
+</head>
+<body>
+    <div class="calculator">
+        <h1>BMI & BFP Calculator</h1>
+
+        <div class="description-box">
+            <h2>BMI & BFP Description</h2>
+            <p>The Body Mass Index (BMI) is a measurement that evaluates the relationship between weight and height. It is widely used as a simple and quick method to assess whether a person has a healthy body weight. Based on the BMI value, individuals are generally categorized into different weight ranges, such as underweight, normal weight, overweight, and obese.</p>
+            <p>Body Fat Percentage (BFP) is the proportion of fat tissue in relation to total body weight. It provides a more detailed assessment of body composition and can be useful in evaluating overall health and fitness. The ideal body fat percentage varies depending on factors such as gender, age, and fitness level. Athletes often have lower body fat percentages, while higher percentages may indicate a need to focus on improving fitness and reducing fat.</p>
+        </div>
+
+        <div class="row">
+            <label for="heightFeet">Height:</label>
+            <input type="text" id="heightFeet" placeholder="Feet">
+            <input type="text" id="heightInches" placeholder="Inches">
+            <select id="heightUnits">
+                <option value="ft">Feet & Inches</option>
+                <option value="cm">Centimeters</option>
+            </select>
+        </div>
+
+        <div class="row">
+            <label for="weight">Weight:</label>
+            <input type="text" id="weight" placeholder="Enter weight">
+            <select id="weightUnits">
+                <option value="lbs">Pounds</option>
+                <option value="kg">Kilograms</option>
+            </select>
+        </div>
+
+        <div class="row">
+            <label for="age">Age:</label>
+            <input type="text" id="age" placeholder="Enter age">
+        </div>
+
+        <div class="row">
+            <label for="gender">Gender:</label>
+            <select id="gender">
+                <option value="male">Male</option>
+                <option value="female">Female</option>
+            </select>
+        </div>
+
+        <input type="button" value="Calculate" onclick="calculateBMIandBFP()">
+        <div class="result" id="result"></div>
+
+        <div class="info">
+            <div class="range">
+                <h2>BMI & BFP Ranges</h2>
+                <div class="range">
+                    <p>BMI:</p>
+                    <ul>
+                        <li><18.5: Underweight</li>
+                        <li>18.5-24.9: Normal weight</li>
+                        <li>25-29.9: Overweight</li>
+                        <li>30+: Obesity</li>
+                    </ul>
+                </div>
+                <div class="range">
+                    <p>BFP (Men & Women):</p>
+                    <ul>
+                        <li><6%: Essential fat</li>
+                        <li>6-24%: Athletes</li>
+                        <li>25-31%: Fitness</li>
+                        <li>32%+: Acceptable</li>
+                    </ul>
+                </div>
+            </div>
+        </div>
+    </div>
+
+    <script src="script.js"></script>
+</body>
+</html>
